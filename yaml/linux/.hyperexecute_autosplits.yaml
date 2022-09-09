@@ -1,0 +1,25 @@
+---
+version: "0.1"
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+runson: linux
+autosplit: true
+retryOnFailure: true
+maxRetries: 5
+concurrency: 2
+env:
+ TARGET_OS: "LINUX"
+cacheKey: '{{ checksum "requirement.txt" }}'
+cacheDirectories:
+  - CacheDir
+pre:
+  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - playwright install
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 'def' *.py
+testRunnerCommand: python $test
+post:
+  - cat yaml/win/*.*hyperexecute_autosplits.yaml

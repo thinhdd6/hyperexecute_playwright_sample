@@ -1,0 +1,19 @@
+---
+version: '0.1'
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+matrix:
+  os: [mac]
+  files: ["test_app.py", "test_sample_.py"]
+runson: ${matrix.os}
+pre:
+  - pip3 install -r requirement.txt --cache-dir CacheDir
+  - playwright install
+cacheKey: '{{ checksum "requirement.txt" }}'
+cacheDirectories:
+  - CacheDir
+testSuites:
+  - python $files
+post:
+  - cat yaml/win/.hyperexecute_matrix.yaml
