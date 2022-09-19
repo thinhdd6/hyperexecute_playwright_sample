@@ -5,11 +5,12 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 matrix:
   os: [mac]
-  files: ["test_app.py", "test_sample_.py"]
+  files: ["test_app.py"]
 runson: ${matrix.os}
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir
   - playwright install
+  - npm install playwright@1.23.0 --save-exact
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir

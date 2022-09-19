@@ -173,7 +173,6 @@ testRunnerCommand: python $test
 
 Running the above command on the terminal will give a list of Python files that are located in the Project folder:
 
-* test_sample_.py
 * test_app.py
 
 The *testRunnerCommand* contains the command that is used for triggering the test. The output fetched from the *testDiscoverer* command acts as an input to the *testRunner* command.
@@ -234,10 +233,10 @@ The target platform is set to Windows. Please set the *[runson]* key to *[mac]* 
 runson: win
 ```
 
-Python files in the 'tests' folder contain the test suites run on the HyperExecute grid. In the example, the tests in the files *tests/lt_sample_todo.py* and *tests/lt_selenium_playground.py* run in parallel using the specified input combinations.
+Python files in the 'tests' folder contain the test suites run on the HyperExecute grid. In the example, the tests in the files *test_app.py* run in parallel using the specified input combinations.
 
 ```yaml
-files: ["test_app.py", "test_sample_.py"]
+files: ["test_app.py"]
 ```
 
 The *testSuites* object contains a list of commands (that can be presented in an array). In the current YAML file, commands for executing the tests are put in an array (with a '-' preceding each item). The Python command is used to run tests in *.py* files. The files are mentioned as an array to the *files* key that is a part of the matrix.

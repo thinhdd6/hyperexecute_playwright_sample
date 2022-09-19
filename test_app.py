@@ -3,7 +3,6 @@ import re
 import subprocess
 import urllib
 import json
-import pytest
 from os import environ
 from time import sleep
 from playwright.sync_api import sync_playwright, expect
