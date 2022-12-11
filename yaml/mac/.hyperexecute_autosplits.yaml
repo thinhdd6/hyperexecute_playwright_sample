@@ -15,12 +15,12 @@ cacheDirectories:
   - CacheDir
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir
-  - playwright install
+  - python3 -m playwright install
   - npm install playwright@1.23.0 --save-exact
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep -lr 'def' *.py
-testRunnerCommand: python $test
+testRunnerCommand: python3 $test
 post:
-  - cat yaml/win/*.*hyperexecute_matrix.yaml
+  - cat yaml/mac/.hyperexecute_autosplits.yaml

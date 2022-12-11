@@ -23,4 +23,4 @@ testDiscovery:
   command: grep -lr 'def' *.py
 testRunnerCommand: python $test
 post:
-  - cat yaml/win/.hyperexecute_matrix.yaml
+  - cat yaml/win/.hyperexecute_autosplits.yaml
