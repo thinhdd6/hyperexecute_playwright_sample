@@ -9,12 +9,12 @@ matrix:
 runson: ${matrix.os}
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir
-  - playwright install
+  - python3 -m playwright install
   - npm install playwright@1.23.0 --save-exact
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir
 testSuites:
-  - python $files
+  - python3 $files
 post:
-  - cat yaml/win/.hyperexecute_autosplits.yaml
+  - cat yaml/mac/.hyperexecute_matrix.yaml

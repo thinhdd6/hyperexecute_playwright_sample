@@ -17,4 +17,4 @@ cacheDirectories:
 testSuites:
   - python $files
 post:
-  - cat yaml/win/.hyperexecute_autosplits.yaml
+  - cat yaml/linux/.hyperexecute_matrix.yaml

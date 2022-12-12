@@ -7,7 +7,7 @@ runson: win
 autosplit: true
 retryOnFailure: true
 maxRetries: 1
-concurrency: 2
+concurrency: 1
 env:
  TARGET_OS: "Windows 10"
 cacheKey: '{{ checksum "requirement.txt" }}'
