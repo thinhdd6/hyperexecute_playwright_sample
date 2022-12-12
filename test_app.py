@@ -38,9 +38,6 @@ def test_homepage_has_Playwright_in_title_and_get_started_link_linking_to_the_in
         expect(get_started).to_have_attribute("href", "/docs/intro")
         get_started.click()
         expect(page).to_have_url(re.compile(".*intro"))
-        page.goto('https://pptr.dev/')
-        clickOnElement(page, 'guides/')
-        clickOnElement(page, 'api/')
         sleep(2)
         #Lambdatest sample app test
         page.goto('https://lambdatest.github.io/sample-todo-app/')

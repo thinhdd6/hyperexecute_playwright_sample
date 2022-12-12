@@ -6,7 +6,7 @@ testSuiteStep: 90
 runson: linux
 autosplit: true
 retryOnFailure: true
-maxRetries: 5
+maxRetries: 1
 concurrency: 2
 env:
  TARGET_OS: "LINUX"
@@ -23,4 +23,4 @@ testDiscovery:
   command: grep -lr 'def' *.py
 testRunnerCommand: python $test
 post:
-  - cat yaml/win/*.*hyperexecute_matrix.yaml
+  - cat yaml/linux/.hyperexecute_autosplits.yaml
