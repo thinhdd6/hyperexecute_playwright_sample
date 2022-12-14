@@ -7,7 +7,7 @@ runson: linux
 autosplit: true
 retryOnFailure: true
 maxRetries: 1
-concurrency: 2
+concurrency: 1
 env:
  TARGET_OS: "LINUX"
 cacheKey: '{{ checksum "requirement.txt" }}'
