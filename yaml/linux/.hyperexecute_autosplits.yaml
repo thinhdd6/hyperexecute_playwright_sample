@@ -9,14 +9,14 @@ retryOnFailure: true
 maxRetries: 1
 concurrency: 1
 env:
- TARGET_OS: "LINUX"
+  TARGET_OS: "LINUX"
 cacheKey: '{{ checksum "requirement.txt" }}'
 cacheDirectories:
   - CacheDir
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir
   - playwright install
-  - npm install playwright@1.23.0 --save-exact
+  - npm install playwright --save-exact
 testDiscovery:
   type: raw
   mode: dynamic
