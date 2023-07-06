@@ -18,3 +18,5 @@ testSuites:
   - python $files
 post:
   - cat yaml/win/.hyperexecute_matrix.yaml
+
+jobLabel: [playwright-Python, win, matrix]
