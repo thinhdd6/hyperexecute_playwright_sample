@@ -24,3 +24,5 @@ testDiscovery:
 testRunnerCommand: python $test
 post:
   - cat yaml/linux/.hyperexecute_autosplits.yaml
+
+jobLabel: [playwright-Python, linux, autosplit]
