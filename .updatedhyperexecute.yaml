@@ -1,0 +1,128 @@
+version: "0.1"
+user: thinhdd6
+key: 6QjciZdw0NIM18T8EXvNwZMQqO9lZfnqkZClw66pwZB8SjSuzL
+testSuites: []
+pre: [pip3 install -r requirement.txt --cache-dir CacheDir, python3 -m playwright install, npm install playwright --save-exact]
+preDirectives:
+    commands: [pip3 install -r requirement.txt --cache-dir CacheDir, python3 -m playwright install, npm install playwright --save-exact]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+post: [cat yaml/mac/.hyperexecute_autosplits.yaml]
+postDirectives:
+    commands: [cat yaml/mac/.hyperexecute_autosplits.yaml]
+    shell: ""
+    workingDirectory: ""
+env:
+    TARGET_OS: MacOS Catalina
+jobLabel:
+    - playwright-Python
+    - mac
+    - autosplit
+runson: mac
+autosplit: true
+concurrency: 1
+testDiscovery:
+    autosubset: true
+    command: grep -lr 'def' *.py
+    mode: dynamic
+    type: raw
+testRunnerCommand: python3 $test
+globalTimeout: 90
+tunnelOpts:
+    testsPerTunnel: 10
+testSuiteTimeout: 90
+testSuiteStep: 90
+cacheDirectories:
+    - CacheDir
+cacheKey: '{{ checksum "requirement.txt" }}'
+retryOnFailure: true
+maxRetries: 1
+jobID: ae167dfd-13af-4f31-b6a3-406f7e72f06b
+codeDirectory: hyperexecute-playwright-python-sample
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: false
+    args:
+        appPath: ""
+        testSuitePath: ""
+        xcTestPlanPath: ""
+        shards:
+            mappings: []
+        filters:
+            attributes: []
+        devices: []
+        deviceSelectionStrategy: ""
+        appId: ""
+        testSuiteAppId: ""
+        xcTestPlanId: ""
+        skipXMLOnRun: false
+        skipInstall: false
+        disableReleaseDevice: false
+        platformName: ""
+        isRealMobile: null
+        avoidAppLaunch: false
+        queueTimeout: 0
+        uninstallPreviousBuild: false
+        language: ""
+        locale: ""
+        preservedDevice: false
+        fixedIP: ""
+        resignApp: true
+        minorOsVersion: false
+        playwrightRD: false
+        mobileDC: null
+        skipUninstallPreviousBuild: false
+        isVirtualDevice: false
+        mitmProxy: false
+        networkHar: false
+        artifacts: false
+        otherApps: []
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+    baseCommand: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+testType: playwright
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+sourcePayload:
+    verifySSL: true
+collectLocalGitData: true
+dynamicAllocation: false
+appium: false
+platformConfig: null
+differentialUpload:
+    enabled: false
+    ttlHours: null
+    forcedDisabled: false
+project:
+    id: ""
+    name: ""
+    type: default
+meta: {}
+alwaysRunPostSteps: false
+errorCategorizedOnFailureOnly: false
+testDiscoveryResultV3: []
+storageType: ""
+localHTTPProxy: ""
+regionConfig: []
+waitForArtefactsUpload: false
+unzipPayload: false
+projectpath: ""
+accessibilityJob: false
+slackChannel: ""
