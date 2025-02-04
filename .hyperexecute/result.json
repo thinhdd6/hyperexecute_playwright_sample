@@ -1,22 +1,22 @@
 {
-    "id": "74462e6c-dc9b-4f86-8b38-844e499a7a5b",
-    "created_at": "2025-02-04T09:27:39Z",
-    "update_at": "2025-02-04T09:29:41Z",
+    "id": "47be0fb9-f804-49b5-b22b-d0d3ac1fa0db",
+    "created_at": "2025-02-04T09:49:44Z",
+    "update_at": "2025-02-04T09:51:29Z",
     "global_timeout": 90,
     "tunnel_name": "",
-    "start_time": "2025-02-04T09:28:34Z",
-    "end_time": "2025-02-04T09:29:41Z",
+    "start_time": "2025-02-04T09:50:39Z",
+    "end_time": "2025-02-04T09:51:29Z",
     "summary": {
-        "total_time": 67000000000,
-        "execution_time": 67000000000,
+        "total_time": 50000000000,
+        "execution_time": 50000000000,
         "total_tasks": 1,
-        "build_time_consumed": 67000000000,
-        "jobTestExecutionTime": "29s",
-        "failed_tasks": 1,
+        "build_time_consumed": 50000000000,
+        "jobTestExecutionTime": "12s",
+        "failed_tasks": 0,
         "total_stage_info": {
             "postrun": {
-                "StageFailedPercent": 100,
-                "StagePassPercent": 0,
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
                 "TotalStage": 1
             },
             "prerun": {
@@ -25,8 +25,8 @@
                 "TotalStage": 1
             },
             "scenario": {
-                "StageFailedPercent": 100,
-                "StagePassPercent": 0,
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
                 "TotalStage": 1
             },
             "test_discovery": {
@@ -35,85 +35,72 @@
                 "TotalStage": 1
             }
         },
-        "status": "failed",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=74462e6c-dc9b-4f86-8b38-844e499a7a5b"
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=47be0fb9-f804-49b5-b22b-d0d3ac1fa0db"
     },
     "tasks": [
         {
-            "id": "4060444e-49a7-4ffe-b1fe-1b36de28d3fd",
-            "os": "win",
-            "status": "failed",
-            "remark": "error in running test suites - step 1 - exit status 1",
+            "id": "311411ae-3b2d-47a3-9a09-4aa718f7040b",
+            "os": "linux",
+            "status": "completed",
+            "remark": "completed",
             "debug": false,
-            "created_at": "2025-02-04T09:28:18Z",
-            "update_at": "2025-02-04T09:29:41Z",
-            "start_time": "2025-02-04T09:28:34Z",
-            "end_time": "2025-02-04T09:29:41Z",
+            "created_at": "2025-02-04T09:50:23Z",
+            "update_at": "2025-02-04T09:51:29Z",
+            "start_time": "2025-02-04T09:50:39Z",
+            "end_time": "2025-02-04T09:51:29Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "0701d020-fc8c-47c8-a365-3aec4883b9f3",
-                    "type": "scenario",
-                    "status": "failed",
-                    "name": "test_multi_platform.py",
-                    "iteration": 0,
-                    "link": "command.1.0.log",
-                    "created_at": "2025-02-04T09:28:58Z",
-                    "started_at": "2025-02-04T09:29:00Z",
-                    "updated_at": "2025-02-04T09:29:30Z",
-                    "order": 4,
-                    "task_number": 1
-                },
-                {
-                    "id": "3a45c98a-683d-45ce-a5ad-a4f7fea3f046",
-                    "type": "postrun",
-                    "status": "cancelled",
-                    "name": "post",
-                    "iteration": 0,
-                    "link": "",
-                    "created_at": "2025-02-04T09:28:58Z",
-                    "started_at": "2025-02-04T09:29:41Z",
-                    "updated_at": "2025-02-04T09:29:41Z",
-                    "order": 5,
-                    "task_number": 1
-                },
-                {
-                    "id": "72357023-8441-4b5a-9fdd-266b485445e6",
-                    "type": "test_discovery",
-                    "status": "completed",
-                    "name": "discovery",
-                    "iteration": 0,
-                    "link": "discovery.log",
-                    "created_at": "2025-02-04T09:28:58Z",
-                    "started_at": "2025-02-04T09:28:58Z",
-                    "updated_at": "2025-02-04T09:28:58Z",
-                    "order": 3,
-                    "task_number": 1
-                },
-                {
-                    "id": "72f89cc6-85fa-4d71-ba6f-69b55bf0883e",
+                    "id": "34df9184-a906-48c2-9c33-324e285e7be0",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-02-04T09:28:35Z",
-                    "started_at": "2025-02-04T09:28:35Z",
-                    "updated_at": "2025-02-04T09:28:58Z",
+                    "created_at": "2025-02-04T09:50:40Z",
+                    "started_at": "2025-02-04T09:50:41Z",
+                    "updated_at": "2025-02-04T09:51:00Z",
                     "order": 2,
                     "task_number": 1
                 },
                 {
-                    "id": "78164be3-5d0a-4169-b025-6f168a5d9342",
+                    "id": "7b6fa51c-3635-4032-ae2b-baf1b3ac5925",
                     "type": "scenario",
-                    "status": "failed",
+                    "status": "completed",
                     "name": "test_multi_platform.py",
-                    "iteration": 1,
-                    "link": "command.1.1.log",
-                    "created_at": "2025-02-04T09:29:32Z",
-                    "started_at": "2025-02-04T09:29:32Z",
-                    "updated_at": "2025-02-04T09:29:39Z",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-02-04T09:51:00Z",
+                    "started_at": "2025-02-04T09:51:07Z",
+                    "updated_at": "2025-02-04T09:51:27Z",
                     "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "ae305c8a-dbd5-4a91-9415-6fdadf5ad1a6",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-02-04T09:51:00Z",
+                    "started_at": "2025-02-04T09:51:00Z",
+                    "updated_at": "2025-02-04T09:51:00Z",
+                    "order": 3,
+                    "task_number": 1
+                },
+                {
+                    "id": "c36c3864-9258-4da7-b2ad-9f6da6a70320",
+                    "type": "postrun",
+                    "status": "completed",
+                    "name": "post",
+                    "iteration": 0,
+                    "link": "post.log",
+                    "created_at": "2025-02-04T09:51:00Z",
+                    "started_at": "2025-02-04T09:51:29Z",
+                    "updated_at": "2025-02-04T09:51:29Z",
+                    "order": 5,
                     "task_number": 1
                 }
             ]

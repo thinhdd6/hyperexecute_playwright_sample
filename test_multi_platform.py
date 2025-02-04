@@ -23,13 +23,11 @@ capabilities = {
     }
 }
 
-
 def set_test_status(page, status, remark):
     page.evaluate(
         "_ => {}",
         f"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\":\"{status}\", \"remark\": \"{remark}\"}}}}"
     )
-
 
 def scenario_1(page):
     page.goto("https://www.lambdatest.com/selenium-playground/")
@@ -116,14 +114,13 @@ def test_sequential_scenarios(playwright):
     try:
         # Execute scenarios in sequence
         scenario_1(page)
-        # scenario_2(page)
-        # scenario_3(page)
+        scenario_2(page)
+        scenario_3(page)
         set_test_status(page, "passed", "All scenarios passed successfully")
     except Exception as err:
         set_test_status(page, "failed", str(err))
         raise
     finally:
-        context.close()
         browser.close()
         playwright.stop()
 
