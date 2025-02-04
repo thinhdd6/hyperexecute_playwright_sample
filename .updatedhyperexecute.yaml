@@ -2,32 +2,32 @@ version: "0.1"
 user: thinhdd6
 key: 6QjciZdw0NIM18T8EXvNwZMQqO9lZfnqkZClw66pwZB8SjSuzL
 testSuites: []
-pre: [pip3 install -r requirement.txt --cache-dir CacheDir, python3 -m playwright install, npm install playwright --save-exact]
+pre: [pip3 install -r requirement.txt --cache-dir CacheDir, playwright install, npm install playwright --save-exact]
 preDirectives:
-    commands: [pip3 install -r requirement.txt --cache-dir CacheDir, python3 -m playwright install, npm install playwright --save-exact]
+    commands: [pip3 install -r requirement.txt --cache-dir CacheDir, playwright install, npm install playwright --save-exact]
     maxRetries: 0
     shell: ""
     workingDirectory: ""
-post: [cat yaml/mac/.hyperexecute_autosplits.yaml]
+post: [cat yaml/win/.hyperexecute_autosplits.yaml]
 postDirectives:
-    commands: [cat yaml/mac/.hyperexecute_autosplits.yaml]
+    commands: [cat yaml/win/.hyperexecute_autosplits.yaml]
     shell: ""
     workingDirectory: ""
 env:
-    TARGET_OS: MacOS Catalina
+    TARGET_OS: Windows 10
 jobLabel:
     - playwright-Python
-    - mac
+    - win
     - autosplit
-runson: mac
+runson: win
 autosplit: true
 concurrency: 1
 testDiscovery:
     autosubset: true
-    command: grep -lr 'def' *.py
+    command: grep -lr 'def' "test_multi_platform.py"
     mode: dynamic
     type: raw
-testRunnerCommand: python3 $test
+testRunnerCommand: python $test
 globalTimeout: 90
 tunnelOpts:
     testsPerTunnel: 10
@@ -38,7 +38,7 @@ cacheDirectories:
 cacheKey: '{{ checksum "requirement.txt" }}'
 retryOnFailure: true
 maxRetries: 1
-jobID: ae167dfd-13af-4f31-b6a3-406f7e72f06b
+jobID: cdde4352-e2a0-4c13-a65d-6833e94ed168
 codeDirectory: hyperexecute-playwright-python-sample
 framework:
     name: ""
@@ -120,9 +120,29 @@ errorCategorizedOnFailureOnly: false
 testDiscoveryResultV3: []
 storageType: ""
 localHTTPProxy: ""
-regionConfig: []
+regionConfig:
+    vm: []
+    storage:
+        region: ""
+        enabled: false
+        name: ""
+        platform: azure
 waitForArtefactsUpload: false
 unzipPayload: false
 projectpath: ""
 accessibilityJob: false
+globalPre:
+    mode: ""
+    commands: []
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+    completed: false
+globalPost:
+    mode: ""
+    commands: []
+    shell: ""
+    workingDirectory: ""
+    completed: false
 slackChannel: ""
+whiteLabelProductTag: ""

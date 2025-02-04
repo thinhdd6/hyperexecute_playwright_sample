@@ -1,119 +1,70 @@
 {
-    "id": "8d15860f-68ab-4b49-addc-97573b9df4bd",
-    "created_at": "2025-01-23T04:52:29Z",
-    "update_at": "2025-01-23T04:54:08Z",
+    "id": "cdde4352-e2a0-4c13-a65d-6833e94ed168",
+    "created_at": "2025-02-04T02:50:59Z",
+    "update_at": "2025-02-04T02:52:17Z",
     "global_timeout": 90,
     "tunnel_name": "",
-    "start_time": "2025-01-23T04:53:22Z",
-    "end_time": "2025-01-23T04:54:08Z",
+    "start_time": "2025-02-04T02:51:55Z",
+    "end_time": "2025-02-04T02:52:17Z",
     "summary": {
-        "total_time": 46000000000,
-        "execution_time": 46000000000,
+        "total_time": 22000000000,
+        "execution_time": 22000000000,
         "total_tasks": 1,
-        "build_time_consumed": 46000000000,
-        "jobTestExecutionTime": "4s",
-        "failed_tasks": 0,
+        "build_time_consumed": 22000000000,
+        "jobTestExecutionTime": "0s",
+        "failed_tasks": 1,
         "total_stage_info": {
-            "postrun": {
-                "StageFailedPercent": 0,
-                "StagePassPercent": 100,
-                "TotalStage": 1
-            },
             "prerun": {
                 "StageFailedPercent": 0,
                 "StagePassPercent": 100,
                 "TotalStage": 1
             },
-            "scenario": {
-                "StageFailedPercent": 0,
-                "StagePassPercent": 100,
-                "TotalStage": 2
-            },
             "test_discovery": {
-                "StageFailedPercent": 0,
-                "StagePassPercent": 100,
+                "StageFailedPercent": 100,
+                "StagePassPercent": 0,
                 "TotalStage": 1
             }
         },
-        "status": "skipped",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=8d15860f-68ab-4b49-addc-97573b9df4bd"
+        "status": "failed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=cdde4352-e2a0-4c13-a65d-6833e94ed168"
     },
     "tasks": [
         {
-            "id": "7e7b4539-d582-42df-8187-38f2c78b9434",
+            "id": "bdca38b6-0cf9-449e-8b20-2d9da769776f",
             "os": "win",
-            "status": "skipped",
-            "remark": "completed",
+            "status": "failed",
+            "remark": "Test Discovery Stage Failed",
             "debug": false,
-            "created_at": "2025-01-23T04:53:05Z",
-            "update_at": "2025-01-23T04:54:08Z",
-            "start_time": "2025-01-23T04:53:22Z",
-            "end_time": "2025-01-23T04:54:08Z",
+            "created_at": "2025-02-04T02:51:39Z",
+            "update_at": "2025-02-04T02:52:17Z",
+            "start_time": "2025-02-04T02:51:55Z",
+            "end_time": "2025-02-04T02:52:17Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "4d5612fd-9ec2-4507-a571-d3418fc95670",
-                    "type": "scenario",
-                    "status": "skipped",
-                    "name": "test_multi_patform.py",
+                    "id": "c1c75f28-c576-42b7-9868-d7689febda98",
+                    "type": "test_discovery",
+                    "status": "failed",
+                    "name": "discovery",
                     "iteration": 0,
-                    "link": "command.2.0.log",
-                    "created_at": "2025-01-23T04:53:44Z",
-                    "started_at": "2025-01-23T04:54:07Z",
-                    "updated_at": "2025-01-23T04:54:07Z",
-                    "order": 5,
+                    "link": "discovery.log",
+                    "created_at": "2025-02-04T02:52:17Z",
+                    "started_at": "2025-02-04T02:52:17Z",
+                    "updated_at": "2025-02-04T02:52:17Z",
+                    "order": 3,
                     "task_number": 1
                 },
                 {
-                    "id": "522993e7-aa8c-4594-b337-5d9eceb4bad3",
-                    "type": "scenario",
-                    "status": "completed",
-                    "name": "test_app.py",
-                    "iteration": 0,
-                    "link": "command.1.0.log",
-                    "created_at": "2025-01-23T04:53:44Z",
-                    "started_at": "2025-01-23T04:53:46Z",
-                    "updated_at": "2025-01-23T04:54:07Z",
-                    "order": 4,
-                    "task_number": 1
-                },
-                {
-                    "id": "83786d9d-33fd-4bc2-946c-4a51ad613e82",
+                    "id": "ed3686b9-1803-4eea-9d45-97033f12938e",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-01-23T04:53:22Z",
-                    "started_at": "2025-01-23T04:53:23Z",
-                    "updated_at": "2025-01-23T04:53:44Z",
+                    "created_at": "2025-02-04T02:51:57Z",
+                    "started_at": "2025-02-04T02:51:57Z",
+                    "updated_at": "2025-02-04T02:52:17Z",
                     "order": 2,
-                    "task_number": 1
-                },
-                {
-                    "id": "c67bacfd-f54c-43aa-b86a-e524fff9aee4",
-                    "type": "test_discovery",
-                    "status": "completed",
-                    "name": "discovery",
-                    "iteration": 0,
-                    "link": "discovery.log",
-                    "created_at": "2025-01-23T04:53:44Z",
-                    "started_at": "2025-01-23T04:53:44Z",
-                    "updated_at": "2025-01-23T04:53:44Z",
-                    "order": 3,
-                    "task_number": 1
-                },
-                {
-                    "id": "cea80415-2266-449c-8a1f-56912a238c34",
-                    "type": "postrun",
-                    "status": "completed",
-                    "name": "post",
-                    "iteration": 0,
-                    "link": "post.log",
-                    "created_at": "2025-01-23T04:53:44Z",
-                    "started_at": "2025-01-23T04:54:07Z",
-                    "updated_at": "2025-01-23T04:54:08Z",
-                    "order": 6,
                     "task_number": 1
                 }
             ]
