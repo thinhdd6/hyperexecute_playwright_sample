@@ -1,16 +1,16 @@
 {
-    "id": "cdde4352-e2a0-4c13-a65d-6833e94ed168",
-    "created_at": "2025-02-04T02:50:59Z",
-    "update_at": "2025-02-04T02:52:17Z",
+    "id": "891a0430-53dd-457e-9b4b-b5240c10b174",
+    "created_at": "2025-02-04T03:09:17Z",
+    "update_at": "2025-02-04T03:10:38Z",
     "global_timeout": 90,
     "tunnel_name": "",
-    "start_time": "2025-02-04T02:51:55Z",
-    "end_time": "2025-02-04T02:52:17Z",
+    "start_time": "2025-02-04T03:10:14Z",
+    "end_time": "2025-02-04T03:10:38Z",
     "summary": {
-        "total_time": 22000000000,
-        "execution_time": 22000000000,
+        "total_time": 24000000000,
+        "execution_time": 24000000000,
         "total_tasks": 1,
-        "build_time_consumed": 22000000000,
+        "build_time_consumed": 24000000000,
         "jobTestExecutionTime": "0s",
         "failed_tasks": 1,
         "total_stage_info": {
@@ -26,45 +26,45 @@
             }
         },
         "status": "failed",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=cdde4352-e2a0-4c13-a65d-6833e94ed168"
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=891a0430-53dd-457e-9b4b-b5240c10b174"
     },
     "tasks": [
         {
-            "id": "bdca38b6-0cf9-449e-8b20-2d9da769776f",
+            "id": "78d13ffe-ac4a-43bc-8103-d58654ad88dd",
             "os": "win",
             "status": "failed",
             "remark": "Test Discovery Stage Failed",
             "debug": false,
-            "created_at": "2025-02-04T02:51:39Z",
-            "update_at": "2025-02-04T02:52:17Z",
-            "start_time": "2025-02-04T02:51:55Z",
-            "end_time": "2025-02-04T02:52:17Z",
+            "created_at": "2025-02-04T03:09:58Z",
+            "update_at": "2025-02-04T03:10:38Z",
+            "start_time": "2025-02-04T03:10:14Z",
+            "end_time": "2025-02-04T03:10:38Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "c1c75f28-c576-42b7-9868-d7689febda98",
-                    "type": "test_discovery",
-                    "status": "failed",
-                    "name": "discovery",
-                    "iteration": 0,
-                    "link": "discovery.log",
-                    "created_at": "2025-02-04T02:52:17Z",
-                    "started_at": "2025-02-04T02:52:17Z",
-                    "updated_at": "2025-02-04T02:52:17Z",
-                    "order": 3,
-                    "task_number": 1
-                },
-                {
-                    "id": "ed3686b9-1803-4eea-9d45-97033f12938e",
+                    "id": "48c81da4-e538-4d72-8fba-8a4f89669870",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-02-04T02:51:57Z",
-                    "started_at": "2025-02-04T02:51:57Z",
-                    "updated_at": "2025-02-04T02:52:17Z",
+                    "created_at": "2025-02-04T03:10:16Z",
+                    "started_at": "2025-02-04T03:10:16Z",
+                    "updated_at": "2025-02-04T03:10:37Z",
                     "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "a32034fa-60dd-4dc4-a854-9fae77ba7c40",
+                    "type": "test_discovery",
+                    "status": "failed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-02-04T03:10:37Z",
+                    "started_at": "2025-02-04T03:10:37Z",
+                    "updated_at": "2025-02-04T03:10:37Z",
+                    "order": 3,
                     "task_number": 1
                 }
             ]
