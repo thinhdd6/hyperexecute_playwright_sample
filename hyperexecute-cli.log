@@ -311,3 +311,5 @@
 {"level":"info","time":"2025-02-04T03:10:40.808Z","caller":"jobmanager/JobSummaryManager.go:58","msg":""}
 {"level":"debug","time":"2025-02-04T03:11:10.477Z","caller":"cmd/bin.go:330","msg":"main: all goroutines have finished."}
 {"level":"debug","time":"2025-02-04T03:11:10.477Z","caller":"cmd/bin.go:369","msg":"Exiting application due to error Failed tasks found."}
+{"level":"error","time":"2025-02-04T09:03:09.031Z","caller":"globalconfigvalidator/setup.go:54","msg":"2025-02-04T09:03:09Z    error    \u001b[91mERR::NO::USER\u001b[0m     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable"}
+{"level":"error","time":"2025-02-04T09:03:09.031Z","caller":"cmd/bin.go:103","msg":"2025-02-04T09:03:09Z    error    \u001b[91mERR::NO::USER\u001b[0m     Unable to find LT username."}

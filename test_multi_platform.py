@@ -2,37 +2,24 @@ import pytest
 import json
 import urllib
 import subprocess
-from playwright.sync_api import sync_playwright
+import os
+import re
+from os import environ
+from time import sleep
+from playwright.sync_api import sync_playwright, expect
 
-# List of capabilities
-CAPABILITIES_LIST = [
-    {
-        "browserName": "MicrosoftEdge",
-        "platform": "macOS Sequoia",
-        "name": "Scenario on Edge macOS"
-    },
-    {
-        "browserName": "Chrome",
-        "platform": "Windows 11",
-        "name": "Scenario on Chrome Windows"
-    },
-    # {
-    #     "browserName": "pw-firefox",
-    #     "platform": "macOS Sequoia",
-    #     "name": "Scenario on Firefox macOS"
-    # },
-]
-
-# Base capabilities shared across tests
-BASE_CAPABILITIES = {
-    "LT:Options": {
-        "build": "Run parallel three scenarios on different browsers 2",
-        "user": "hanakent66@gmail.com",
-        "accessKey": "nvIyg4pNe8gJy5ASUQMZDD6HevOw2euTuOY5Z7W5tbM6Nuzywq",
-        "network": True,
-        "video": True,
-        "console": True,
-        "tunnel": False,
+capabilities = {
+    'browserName': 'Chrome',
+    'browserVersion': 'latest',
+    'LT:Options': {
+        'platform': os.environ.get("TARGET_OS"),
+        'build': 'Playwright Build',
+        'name': 'Playwright Test',
+        'user': os.environ.get("LT_USERNAME"),
+        'accessKey': os.environ.get("LT_ACCESS_KEY"),
+        'network': True,
+        'video': True,
+        'console': True
     }
 }
 
@@ -50,7 +37,6 @@ def set_test_status(page, status, remark):
         "_ => {}",
         f"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\":\"{status}\", \"remark\": \"{remark}\"}}}}"
     )
-
 
 
 def scenario_1(page):
@@ -128,11 +114,8 @@ def scenario_3(page):
     page.wait_for_timeout(2000)
 
 
-
-@pytest.mark.parametrize("capabilities", CAPABILITIES_LIST)
 def test_sequential_scenarios(capabilities):
     # Merge specific capabilities with the base ones
-    merged_capabilities = BASE_CAPABILITIES.copy()
     merged_capabilities["browserName"] = capabilities["browserName"]
     merged_capabilities["LT:Options"]["platform"] = capabilities["platform"]
     merged_capabilities["LT:Options"]["name"] = capabilities["name"]
@@ -154,3 +137,6 @@ def test_sequential_scenarios(capabilities):
         context.close()
         browser.close()
         playwright.stop()
+
+with sync_playwright() as playwright:
+    test_sequential_scenarios(playwright)
