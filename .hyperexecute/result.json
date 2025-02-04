@@ -1,70 +1,119 @@
 {
-    "id": "891a0430-53dd-457e-9b4b-b5240c10b174",
-    "created_at": "2025-02-04T03:09:17Z",
-    "update_at": "2025-02-04T03:10:38Z",
+    "id": "74462e6c-dc9b-4f86-8b38-844e499a7a5b",
+    "created_at": "2025-02-04T09:27:39Z",
+    "update_at": "2025-02-04T09:29:41Z",
     "global_timeout": 90,
     "tunnel_name": "",
-    "start_time": "2025-02-04T03:10:14Z",
-    "end_time": "2025-02-04T03:10:38Z",
+    "start_time": "2025-02-04T09:28:34Z",
+    "end_time": "2025-02-04T09:29:41Z",
     "summary": {
-        "total_time": 24000000000,
-        "execution_time": 24000000000,
+        "total_time": 67000000000,
+        "execution_time": 67000000000,
         "total_tasks": 1,
-        "build_time_consumed": 24000000000,
-        "jobTestExecutionTime": "0s",
+        "build_time_consumed": 67000000000,
+        "jobTestExecutionTime": "29s",
         "failed_tasks": 1,
         "total_stage_info": {
+            "postrun": {
+                "StageFailedPercent": 100,
+                "StagePassPercent": 0,
+                "TotalStage": 1
+            },
             "prerun": {
                 "StageFailedPercent": 0,
                 "StagePassPercent": 100,
                 "TotalStage": 1
             },
-            "test_discovery": {
+            "scenario": {
                 "StageFailedPercent": 100,
                 "StagePassPercent": 0,
+                "TotalStage": 1
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
                 "TotalStage": 1
             }
         },
         "status": "failed",
-        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=891a0430-53dd-457e-9b4b-b5240c10b174"
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=74462e6c-dc9b-4f86-8b38-844e499a7a5b"
     },
     "tasks": [
         {
-            "id": "78d13ffe-ac4a-43bc-8103-d58654ad88dd",
+            "id": "4060444e-49a7-4ffe-b1fe-1b36de28d3fd",
             "os": "win",
             "status": "failed",
-            "remark": "Test Discovery Stage Failed",
+            "remark": "error in running test suites - step 1 - exit status 1",
             "debug": false,
-            "created_at": "2025-02-04T03:09:58Z",
-            "update_at": "2025-02-04T03:10:38Z",
-            "start_time": "2025-02-04T03:10:14Z",
-            "end_time": "2025-02-04T03:10:38Z",
+            "created_at": "2025-02-04T09:28:18Z",
+            "update_at": "2025-02-04T09:29:41Z",
+            "start_time": "2025-02-04T09:28:34Z",
+            "end_time": "2025-02-04T09:29:41Z",
             "group_number": 1,
             "stages": [
                 {
-                    "id": "48c81da4-e538-4d72-8fba-8a4f89669870",
+                    "id": "0701d020-fc8c-47c8-a365-3aec4883b9f3",
+                    "type": "scenario",
+                    "status": "failed",
+                    "name": "test_multi_platform.py",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-02-04T09:28:58Z",
+                    "started_at": "2025-02-04T09:29:00Z",
+                    "updated_at": "2025-02-04T09:29:30Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "3a45c98a-683d-45ce-a5ad-a4f7fea3f046",
+                    "type": "postrun",
+                    "status": "cancelled",
+                    "name": "post",
+                    "iteration": 0,
+                    "link": "",
+                    "created_at": "2025-02-04T09:28:58Z",
+                    "started_at": "2025-02-04T09:29:41Z",
+                    "updated_at": "2025-02-04T09:29:41Z",
+                    "order": 5,
+                    "task_number": 1
+                },
+                {
+                    "id": "72357023-8441-4b5a-9fdd-266b485445e6",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-02-04T09:28:58Z",
+                    "started_at": "2025-02-04T09:28:58Z",
+                    "updated_at": "2025-02-04T09:28:58Z",
+                    "order": 3,
+                    "task_number": 1
+                },
+                {
+                    "id": "72f89cc6-85fa-4d71-ba6f-69b55bf0883e",
                     "type": "prerun",
                     "status": "completed",
                     "name": "pre",
                     "iteration": 0,
                     "link": "pre.log",
-                    "created_at": "2025-02-04T03:10:16Z",
-                    "started_at": "2025-02-04T03:10:16Z",
-                    "updated_at": "2025-02-04T03:10:37Z",
+                    "created_at": "2025-02-04T09:28:35Z",
+                    "started_at": "2025-02-04T09:28:35Z",
+                    "updated_at": "2025-02-04T09:28:58Z",
                     "order": 2,
                     "task_number": 1
                 },
                 {
-                    "id": "a32034fa-60dd-4dc4-a854-9fae77ba7c40",
-                    "type": "test_discovery",
+                    "id": "78164be3-5d0a-4169-b025-6f168a5d9342",
+                    "type": "scenario",
                     "status": "failed",
-                    "name": "discovery",
-                    "iteration": 0,
-                    "link": "discovery.log",
-                    "created_at": "2025-02-04T03:10:37Z",
-                    "started_at": "2025-02-04T03:10:37Z",
-                    "updated_at": "2025-02-04T03:10:37Z",
-                    "order": 3,
+                    "name": "test_multi_platform.py",
+                    "iteration": 1,
+                    "link": "command.1.1.log",
+                    "created_at": "2025-02-04T09:29:32Z",
+                    "started_at": "2025-02-04T09:29:32Z",
+                    "updated_at": "2025-02-04T09:29:39Z",
+                    "order": 4,
                     "task_number": 1
                 }
             ]

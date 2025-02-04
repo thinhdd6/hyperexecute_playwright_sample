@@ -24,7 +24,7 @@ autosplit: true
 concurrency: 1
 testDiscovery:
     autosubset: true
-    command: grep -lr 'def' "test_multi_platform.py"
+    command: grep -lr 'def' test_multi_platform.py
     mode: dynamic
     type: raw
 testRunnerCommand: python $test
@@ -38,8 +38,8 @@ cacheDirectories:
 cacheKey: '{{ checksum "requirement.txt" }}'
 retryOnFailure: true
 maxRetries: 1
-jobID: 891a0430-53dd-457e-9b4b-b5240c10b174
-codeDirectory: hyperexecute-playwright-python-sample
+jobID: 74462e6c-dc9b-4f86-8b38-844e499a7a5b
+codeDirectory: hyperexecute_playwright_sample
 framework:
     name: ""
     flags: []

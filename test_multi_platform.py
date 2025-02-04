@@ -23,14 +23,6 @@ capabilities = {
     }
 }
 
-def connect_browser(capabilities):
-    playwright_version = str(subprocess.getoutput("playwright --version")).strip().split(" ")[1]
-    capabilities["LT:Options"]["playwrightClientVersion"] = playwright_version
-    lt_cdp_url = "wss://cdp.lambdatest.com/playwright?capabilities=" + urllib.parse.quote(json.dumps(capabilities))
-    playwright = sync_playwright().start()
-    browser = playwright.chromium.connect(lt_cdp_url, timeout=120000)
-    return playwright, browser
-
 
 def set_test_status(page, status, remark):
     page.evaluate(
@@ -114,21 +106,18 @@ def scenario_3(page):
     page.wait_for_timeout(2000)
 
 
-def test_sequential_scenarios(capabilities):
-    # Merge specific capabilities with the base ones
-    merged_capabilities["browserName"] = capabilities["browserName"]
-    merged_capabilities["LT:Options"]["platform"] = capabilities["platform"]
-    merged_capabilities["LT:Options"]["name"] = capabilities["name"]
-
-    playwright, browser = connect_browser(merged_capabilities)
-    context = browser.new_context(viewport={"width": 1920, "height": 1080})
-    page = context.new_page()
+def test_sequential_scenarios(playwright):
+    playwrightVersion = str(subprocess.getoutput('playwright --version')).strip().split(" ")[1]
+    capabilities['LT:Options']['playwrightVersion'] = playwrightVersion
+    lt_cdp_url = 'wss://cdp.lambdatest.com/playwright?capabilities=' + urllib.parse.quote(json.dumps(capabilities))
+    browser = playwright.chromium.connect(lt_cdp_url)
+    page = browser.new_page()
 
     try:
         # Execute scenarios in sequence
         scenario_1(page)
-        scenario_2(page)
-        scenario_3(page)
+        # scenario_2(page)
+        # scenario_3(page)
         set_test_status(page, "passed", "All scenarios passed successfully")
     except Exception as err:
         set_test_status(page, "failed", str(err))

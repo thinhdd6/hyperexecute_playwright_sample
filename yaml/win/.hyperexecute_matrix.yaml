@@ -5,7 +5,7 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 matrix:
   os: [win]
-  files: ["test_multi_platform.py"]
+  files: ["test_scenario_1.py"]
 runson: ${matrix.os}
 pre:
   - pip3 install -r requirement.txt --cache-dir CacheDir

@@ -20,7 +20,7 @@ pre:
 testDiscovery:
   type: raw
   mode: dynamic
-  command: grep -lr 'def' test_multi_platform.py
+  command: grep -lr 'def' test_scenario_1.py
 testRunnerCommand: python $test
 post:
   - cat yaml/win/.hyperexecute_autosplits.yaml
